@@ -7,7 +7,6 @@ Description: Web Development/INFT1206. Assignment #4: HTML tables and accessibil
 -->
 
 
-
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -22,29 +21,29 @@ Description: Web Development/INFT1206. Assignment #4: HTML tables and accessibil
     <table>
       <colgroup>
         <col span="2">
-        <col style="border: 3px solid black;">
+        <col style="border: 2px solid black;">
       </colgroup>
       <caption>Data about the planets of our solar system (Planetary facts taken from <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>).</caption>
       <thead>
         <tr>
           <td colspan="2" ></td>
-          <th>Name</th>
-          <th>Mass (10<sup>24</sup>kg)</th>
-          <th>Diameter (km)</th>
-          <th>Density (kg/m<sup>3</sup>)</th>
-          <th>Gravity (m/s<sup>2</sup>)</th>
-          <th>Length of day (hours)</th>
-          <th>Distance from Sun (10<sup>6</sup>km)</th>
-          <th> Mean temperature (°C)</th>
-          <th>Number of moons</th>
-          <th>Notes</th>
+          <th scope="col">Name</th>
+          <th scope="col">Mass (10<sup>24</sup>kg)</th>
+          <th scope="col">Diameter (km)</th>
+          <th scope="col">Density (kg/m<sup>3</sup>)</th>
+          <th scope="col">Gravity (m/s<sup>2</sup>)</th>
+          <th scope="col">Length of day (hours)</th>
+          <th scope="col">Distance from Sun (10<sup>6</sup>km)</th>
+          <th scope="col"> Mean temperature (°C)</th>
+          <th scope="col">Number of moons</th>
+          <th scope="col">Notes</th>
         </tr>
       </thead>
 
       <tbody>
         <tr>
-          <th colspan="2" rowspan="4">Terrestrial planets</th>
-          <th>Mercury</th>
+          <th colspan="2" rowspan="4" scope="rowgroup">Terrestrial planets</th>
+          <th scope="row">Mercury</th>
           <th>0.330</th>
           <th>4,879</th>
           <th>5427</th>
@@ -56,7 +55,7 @@ Description: Web Development/INFT1206. Assignment #4: HTML tables and accessibil
           <th>Closest to the Sun</th>
         </tr>
         <tr>
-          <th>Venus</th>
+          <th scope="row">Venus</th>
           <th>4.87</th>
           <th>12,104</th>
           <th>5243</th>
@@ -68,7 +67,7 @@ Description: Web Development/INFT1206. Assignment #4: HTML tables and accessibil
           <th></th>
         </tr>
         <tr>
-          <th>Earth</th>
+          <th scope="row">Earth</th>
           <th>5.97</th>
           <th>12,756</th>
           <th>5514</th>
@@ -80,7 +79,7 @@ Description: Web Development/INFT1206. Assignment #4: HTML tables and accessibil
           <th>Our world</th>
         </tr>
         <tr>
-          <th>Mars</th>
+          <th scope="row">Mars</th>
           <th>0.642</th>
           <th>6,792</th>
           <th>3933</th>
@@ -92,9 +91,9 @@ Description: Web Development/INFT1206. Assignment #4: HTML tables and accessibil
           <th>The red planet</th>
         </tr>
         <tr>
-          <th rowspan="4">Jovian planets</th>
-          <th rowspan="2">Gas giants</th>
-          <th>Jupiter</th>
+          <th rowspan="4" scope="rowgroup">Jovian planets</th>
+          <th rowspan="2" scope="rowgroup">Gas giants</th>
+          <th scope="row">Jupiter</th>
           <th>1898</th>
           <th>142,984</th>
           <th>1326</th>
@@ -106,7 +105,7 @@ Description: Web Development/INFT1206. Assignment #4: HTML tables and accessibil
           <th>The largest planet</th>
         </tr>
         <tr>
-          <th>Saturn</th>
+          <th scope="row">Saturn</th>
           <th>568</th>
           <th>120,536</th>
           <th>687</th>
@@ -118,8 +117,8 @@ Description: Web Development/INFT1206. Assignment #4: HTML tables and accessibil
           <th></th>
         </tr>
         <tr>
-          <th rowspan="2">Ice giants</th>
-          <th>Uranus</th>
+          <th rowspan="2" scope="rowgroup">Ice giants</th>
+          <th scope="row">Uranus</th>
           <th>86.8</th>
           <th>51,118</th>
           <th>1271</th>
@@ -131,7 +130,7 @@ Description: Web Development/INFT1206. Assignment #4: HTML tables and accessibil
           <th></th>
         </tr>
         <tr>
-          <th>Neptune</th>
+          <th scope="row">Neptune</th>
           <th>102</th>
           <th>49,528</th>
           <th>1638</th>
@@ -144,7 +143,7 @@ Description: Web Development/INFT1206. Assignment #4: HTML tables and accessibil
         </tr>
         <tr>
           <th colspan="2" rowspan="2">Dwarf planets*</th>
-          <th>Pluto</th>
+          <th scope="row">Pluto</th>
           <th>0.0146</th>
           <th>2,370</th>
           <th>2095</th>
