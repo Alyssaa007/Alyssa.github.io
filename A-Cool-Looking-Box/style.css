@@ -3,11 +3,11 @@ html {
   }
 
   div {
-    width: ;
-    line-height: ;
-    margin: ;
+    width: 250px;
+    line-height: 9;
+    margin: auto;
 
-    font-size: ;
+    font-size: 1.1000rem;
 
     text-align: center;
     color: ;
@@ -17,8 +17,12 @@ html {
     border-radius: ;
     border: ;
 
-    background-color: ;
-    background-image: ;
+    background-color: red;
+    background-image: linear-gradient(
+        to top left,
+        rgba(0,0,0,0.2),
+        rgba(0,0,0,0.2) 30%,
+        rgba(0,0,0,0));
     
     box-shadow: ;
   }
