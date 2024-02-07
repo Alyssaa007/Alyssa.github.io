@@ -10,12 +10,12 @@ html {
     font-size: 1.1000rem;
 
     text-align: center;
-    color: ;
+    color: white;
 
-    text-shadow: ;
+    text-shadow: 1px 1px 1px black;
     
-    border-radius: ;
-    border: ;
+    border-radius: 12px;
+    border: 1px solid #990000;
 
     background-color: red;
     background-image: linear-gradient(
