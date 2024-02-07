@@ -13,8 +13,39 @@ Description: Web Development/INFT1206. Assignment #3 Part 2: A cool-looking box.
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Cool box</title>
-    
+    <link rel="stylesheet" href="style.css" />
   </head>
+  <style>
+    html {
+    font-family: sans-serif;
+  }
+
+  div {
+    width: 250px;
+    line-height: 9;
+    margin: auto;
+
+    font-size: 1.1000rem;
+
+    text-align: center;
+    color: white;
+
+    text-shadow: 1px 1px 1px black;
+    
+    border-radius: 12px;
+    border: 1px solid #990000;
+
+    background-color: red;
+    background-image: linear-gradient(
+        to top left,
+        rgba(0,0,0,0.2),
+        rgba(0,0,0,0.2) 30%,
+        rgba(0,0,0,0));
+    
+    box-shadow: inset 2px 2px 3px rgba(255,255,255,0.6),
+    inset -2px -2px 3px rgba(0,0,0,0.6),2px 2px 5px black;
+  }
+  </style>
   <body>
       <div>This is a cool box</div>
   </body>
