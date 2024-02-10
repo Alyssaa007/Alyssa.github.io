@@ -131,9 +131,20 @@ ul, ol {
 }
 
 ul{
-    list-style: ;
+    list-style: square;
 }
 
 ol {
-    list-style: ;  
+    list-style: disc;  
 }
+
+nav ul {
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+nav li {
+  list-style-type: none;
+  margin-bottom: 2rem;
+}
+
