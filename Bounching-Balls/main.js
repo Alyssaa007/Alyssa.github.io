@@ -57,12 +57,6 @@ class Ball {
     }
 }
 
-// Loop function for the balls animation.
-
-function loop() {
-
-}
-
 // Populate the ball array.
 
 const balls = [];
@@ -80,8 +74,22 @@ while(balls.length < 25) {
     randomRGB(),
     size,
     );
-    
+
     balls.push(ball);
+}
+
+// Loop function for the balls animation.
+
+function loop() {
+    ctx.fillStyle = "rgb(0 0 0 / 25%)";
+    ctx.fillRect = (0, 0, width, height);
+
+    for (const ball of balls) {
+        ball.draw();
+        ball.update();
+    }
+
+    requestAnimationFrame(loop);
 }
 
 // Start the animation loop.
