@@ -18,3 +18,42 @@ function random(min, max) {
 function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
+
+// Ball class for the methods "draw", "update", "collision detection".
+
+class Ball {
+
+    constructor(x, y, velX, velY, color, size) {
+
+    }
+
+    draw() {
+
+    }
+
+    update() {
+
+    }
+
+    collision() {
+
+    }
+}
+
+// Loop function for the balls animation.
+
+function loop() {
+
+}
+
+// Populate the ball array.
+
+const balls = [];
+
+while(){
+
+}
+
+// Start the animation loop.
+
+loop();
