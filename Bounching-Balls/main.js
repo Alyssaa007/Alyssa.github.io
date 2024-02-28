@@ -9,8 +9,7 @@ const height = (canvas.height = window.innerHeight);
 // function to generate random number
 
 function random(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
- 
+    return Math.floor(Math.random() * (max - min + 1)) + min; 
 }
 
 // function to generate random color
@@ -94,8 +93,8 @@ while(balls.length < 25) {
 // Loop function for the balls animation.
 
 function loop() {
-    ctx.fillStyle = "rgb(0, 0, 0 / 0.25)";
-    ctx.fillRect = (0, 0, width, height);
+    ctx.fillStyle = "rgb(0, 0, 0, 0.25)";
+    ctx.fillRect(0, 0, width, height);
 
     for (const ball of balls) {
         ball.draw();
