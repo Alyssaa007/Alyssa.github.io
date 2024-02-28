@@ -9,8 +9,8 @@ const height = (canvas.height = window.innerHeight);
 // function to generate random number
 
 function random(min, max) {
-  const num = Math.floor(Math.random() * (max - min + 1)) + min;
-  return num;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+ 
 }
 
 // function to generate random color
@@ -34,7 +34,7 @@ class Ball {
     draw() {
         ctx.beginPath();
         ctx.fillStyle = this.color;
-        ctz.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+        ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
         ctx.fill();
     }
 
@@ -53,7 +53,17 @@ class Ball {
     }
 
     collision() {
+        for (const ball of balls) {
+            if (this !== ball) {
+                const dx = this.x - ball.x;
+                const dy = this.y - ball.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
 
+                if (distance < this.size + ball.size) {
+                    ball.color = this.color = randomRGB();
+                }
+            }
+        }
     }
 }
 
@@ -68,7 +78,7 @@ while(balls.length < 25) {
     // away from the edge of the canvas, to avoid drawing  
 
     random(0 + size, width - size),
-    random(0 + size, width - size),
+    random(0 + size, height - size),
     random(-7, 7),
     random(-7, 7),
     randomRGB(),
@@ -81,12 +91,13 @@ while(balls.length < 25) {
 // Loop function for the balls animation.
 
 function loop() {
-    ctx.fillStyle = "rgb(0 0 0 / 25%)";
+    ctx.fillStyle = "rgb(0, 0, 0 / 0.25)";
     ctx.fillRect = (0, 0, width, height);
 
     for (const ball of balls) {
         ball.draw();
         ball.update();
+        ball.collision();
     }
 
     requestAnimationFrame(loop);
