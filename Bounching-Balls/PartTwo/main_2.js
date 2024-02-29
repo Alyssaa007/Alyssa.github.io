@@ -1,5 +1,10 @@
 // setup canvas
 
+// Adding for the evil ball.
+
+const para = document.querySelector('p');
+let count = 0;
+
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -104,7 +109,6 @@ class EvilCircle extends Shape {
             }
           });
         }
-}
 
 // Adding another "draw" method
 draw() {
@@ -121,13 +125,13 @@ checkBounds() {
         this.x -= this.size;
     }
     if ((this.x - this.size) <= 0) {
-        this.x = this.size;
+        this.x += this.size;
     }
     if ((this.y + this.size) >= height) {
-        this.y = -this.size;
+        this.y -= this.size;
     }
     if ((this.y - this.size) <= 0) {
-        this.y = this.size;
+        this.y += this.size;
     }
 }
 
@@ -145,6 +149,7 @@ collision() {
             }
         }
     }
+}
 }
 
 
